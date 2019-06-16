@@ -97,6 +97,18 @@ eval("module.exports = __webpack_require__.p + \"images/[hame]_69e3b5ccd36cca404
 
 /***/ }),
 
+/***/ "./loader/createAvatar.js":
+/*!********************************!*\
+  !*** ./loader/createAvatar.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _active_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./active.jpg */ \"./loader/active.jpg\");\n/* harmony import */ var _active_jpg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_active_jpg__WEBPACK_IMPORTED_MODULE_0__);\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\tvar img = new Image();\r\n\timg.src = _active_jpg__WEBPACK_IMPORTED_MODULE_0___default.a;\r\n\timg.classList.add('active-scss');\r\n\tdocument.getElementById('root').appendChild(img);\r\n});\n\n//# sourceURL=webpack:///./loader/createAvatar.js?");
+
+/***/ }),
+
 /***/ "./loader/index.css":
 /*!**************************!*\
   !*** ./loader/index.css ***!
@@ -116,7 +128,7 @@ eval("\nvar content = __webpack_require__(/*! !../node_modules/_css-loader@2.1.1
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _active_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./active.jpg */ \"./loader/active.jpg\");\n/* harmony import */ var _active_jpg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_active_jpg__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ \"./loader/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.scss */ \"./loader/index.scss\");\n/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n\r\n\r\n\r\nvar root = document.getElementById('root');\r\nvar img = new Image();\r\nimg.src = _active_jpg__WEBPACK_IMPORTED_MODULE_0___default.a;\r\nimg.classList.add('active');\r\n\r\n// img.classList.add('active-scss');\r\n\r\nroot.appendChild(img);\r\n\n\n//# sourceURL=webpack:///./loader/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _active_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./active.jpg */ \"./loader/active.jpg\");\n/* harmony import */ var _active_jpg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_active_jpg__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _createAvatar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createAvatar */ \"./loader/createAvatar.js\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.css */ \"./loader/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.scss */ \"./loader/index.scss\");\n/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\r\n\r\nObject(_createAvatar__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\r\nvar root = document.getElementById('root');\r\nvar img = new Image();\r\nimg.src = _active_jpg__WEBPACK_IMPORTED_MODULE_0___default.a;\r\nimg.classList.add('active');\r\n\r\nimg.classList.add(_index_scss__WEBPACK_IMPORTED_MODULE_3___default.a['active-scss']);\r\n\r\nroot.appendChild(img);\r\n\n\n//# sourceURL=webpack:///./loader/index.js?");
 
 /***/ }),
 
@@ -127,7 +139,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _act
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js!../node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!../node_modules/_postcss-loader@3.0.0@postcss-loader/src!./index.scss */ \"./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js!./loader/index.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js */ \"./node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./loader/index.scss?");
+eval("\nvar content = __webpack_require__(/*! !../node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js??ref--6-1!../node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!../node_modules/_postcss-loader@3.0.0@postcss-loader/src!./index.scss */ \"./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js!./loader/index.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js */ \"./node_modules/_style-loader@0.23.1@style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./loader/index.scss?");
 
 /***/ }),
 
@@ -142,14 +154,14 @@ eval("exports = module.exports = __webpack_require__(/*! ../node_modules/_css-lo
 
 /***/ }),
 
-/***/ "./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js!./loader/index.scss":
-/*!*******************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src!./loader/index.scss ***!
-  \*******************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js?!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js!./loader/index.scss":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js??ref--6-1!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src!./loader/index.scss ***!
+  \*****************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../node_modules/_css-loader@2.1.1@css-loader/dist/runtime/api.js */ \"./node_modules/_css-loader@2.1.1@css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\n  background-color: gray; }\\n  body .active-scss {\\n    width: 400px;\\n    height: 400px;\\n    -webkit-transform: translate(50px, 50px);\\n    transform: translate(50px, 50px);\\n    border-radius: 50%; }\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./loader/index.scss?./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src");
+eval("exports = module.exports = __webpack_require__(/*! ../node_modules/_css-loader@2.1.1@css-loader/dist/runtime/api.js */ \"./node_modules/_css-loader@2.1.1@css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\n  background-color: gray; }\\n  body ._1E6j3EZUoNqtWI7qPaVhGu {\\n    width: 400px;\\n    height: 400px;\\n    -webkit-transform: translate(50px, 50px);\\n    transform: translate(50px, 50px);\\n    border-radius: 50%; }\\n\", \"\"]);\n\n// Exports\nexports.locals = {\n\t\"active-scss\": \"_1E6j3EZUoNqtWI7qPaVhGu\"\n};\n\n//# sourceURL=webpack:///./loader/index.scss?./node_modules/_css-loader@2.1.1@css-loader/dist/cjs.js??ref--6-1!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src");
 
 /***/ }),
 
