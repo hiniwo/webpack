@@ -1,0 +1,9 @@
+body{
+  background-color: gray;
+  .active-scss{
+    width: 400px;
+    height: 400px;
+    transform: translate(50px,50px);
+    border-radius: 50%;
+  }
+}

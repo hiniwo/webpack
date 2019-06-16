@@ -1,6 +1,8 @@
 .active{
     width: 500px;
     height: 500px;
+    transform: translate(50px,50px);
+    border-radius: 50%;
 }
 body{
     background-color: red;
