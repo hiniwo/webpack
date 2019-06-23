@@ -4,13 +4,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-	mode: 'development',
+	mode: 'production',
 	entry: {
 		// core: './webpack_core/index.js',
-		es: './es6/index.js'
+		// es: './es6/index.js'
+		mian : './webpack_advance/index.js'
 	},
 	// devtool: 'cheap-module-eval-source-map',
-	devtool: 'none',
+	devtool: 'source-map',
 	devServer: {
 		// 以dist为基础启动一个服务器，服务器运行在4200端口上，每次启动时自动打开浏览器
 		contentBase: 'dist',
@@ -20,6 +21,9 @@ module.exports = {
 		hotOnly: true // 模块热更新启动失败时，重新刷新浏览器
 		// 最新版的webpack启动模块热更新下面不用加new webpack.HotModuleReplacementPlugin()
 		// 如果添加了会报错
+	},
+	optimization: {
+		usedExports: true
 	},
 	module : {
 		rules : [

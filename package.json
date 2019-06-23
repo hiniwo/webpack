@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "webpack project",
   "private": true,
+  "sideEffects": [
+    "*.css",
+    "@babel/polyfill"
+  ],
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
