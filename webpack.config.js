@@ -9,6 +9,12 @@ module.exports = {
 		core: './webpack_core/index.js'
 	},
 	devtool: 'cheap-module-eval-source-map',
+	devServer: {
+		// 以dist为基础启动一个服务器，服务器运行在4200端口上，每次启动时自动打开浏览器
+		contentBase: 'dist',
+		open: true,
+		port: 8080
+	},
 	module : {
 		rules : [
 			// {

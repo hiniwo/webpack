@@ -4,8 +4,9 @@
   "description": "webpack project",
   "private": true,
   "scripts": {
-    "dev": "webpack",
-    "watch": "webpack --watch"
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server"
   },
   "author": "wwm",
   "license": "ISC",
@@ -24,6 +25,7 @@
     "url-loader": "^2.0.0",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
-    "webpack-dev-middleware": "^3.7.0"
+    "webpack-dev-middleware": "^3.7.0",
+    "webpack-dev-server": "^3.7.2"
   }
 }
