@@ -13,7 +13,11 @@ module.exports = {
 		// 以dist为基础启动一个服务器，服务器运行在4200端口上，每次启动时自动打开浏览器
 		contentBase: 'dist',
 		open: true,
-		port: 8080
+		port: 8080,
+		hot: true, // 启用模块热更新
+		hotOnly: true // 模块热更新启动失败时，重新刷新浏览器
+		// 最新版的webpack启动模块热更新下面不用加new webpack.HotModuleReplacementPlugin()
+		// 如果添加了会报错
 	},
 	module : {
 		rules : [
