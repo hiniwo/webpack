@@ -8,7 +8,7 @@ module.exports = {
 	entry: {
 		// core: './webpack_core/index.js',
 		// es: './es6/index.js'
-		mian : './webpack_advance/index.js'
+		mian : './webpack_advance/index.js',
 	},
 	// devtool: 'cheap-module-eval-source-map',
 	devtool: 'source-map',
@@ -23,7 +23,11 @@ module.exports = {
 		// 如果添加了会报错
 	},
 	optimization: {
-		usedExports: true
+		usedExports: true,
+		splitChunks: {
+			chunks: 'all',
+			automaticNameDelimiter: '_',
+		}
 	},
 	module : {
 		rules : [
