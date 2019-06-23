@@ -8,6 +8,7 @@ module.exports = {
 	entry: {
 		core: './webpack_core/index.js'
 	},
+	devtool: 'cheap-module-eval-source-map',
 	module : {
 		rules : [
 			// {
