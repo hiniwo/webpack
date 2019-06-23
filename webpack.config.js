@@ -2,6 +2,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const miniCssExtractPlugin = require('mini-css-extract-plugin');
+const optimizaCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
 	mode: 'production',
@@ -27,7 +29,10 @@ module.exports = {
 		splitChunks: {
 			chunks: 'all',
 			automaticNameDelimiter: '_',
-		}
+		},
+		minimizer: [
+			new optimizaCssAssetsWebpackPlugin()
+		]
 	},
 	module : {
 		rules : [
@@ -61,7 +66,18 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				use: ['style-loader', 'css-loader', 'postcss-loader']
+				// use: ['style-loader', 'css-loader', 'postcss-loader'],
+				use: [
+					{
+						loader: miniCssExtractPlugin.loader,
+						options: {
+							hmr: true,
+							reloadAll: true
+						}
+					},
+					'css-loader',
+					'postcss-loader'
+				]
 			},
 			{
 				test:/\.(scss|sass)$/,
@@ -84,7 +100,10 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template : 'index.html'
 		}),
-		new CleanWebpackPlugin()
+		new CleanWebpackPlugin(),
+		new miniCssExtractPlugin({
+			filename: '[name].css'
+		})
 	],
 	output : {
 		filename: '[name].js',

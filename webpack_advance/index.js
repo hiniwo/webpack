@@ -1,4 +1,7 @@
 
+import './style01.css';
+import './style.css';
+
 
 // import {add} from './add';
 // import _ from 'lodash'
