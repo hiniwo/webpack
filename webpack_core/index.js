@@ -4,6 +4,8 @@ import './style.css'
 
 var btn = document.createElement('button');
 
+console.log(module.hot);
+
 btn.innerHTML = '新增';
 
 document.body.appendChild(btn);

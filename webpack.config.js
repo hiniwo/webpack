@@ -6,9 +6,11 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
 	mode: 'development',
 	entry: {
-		core: './webpack_core/index.js'
+		// core: './webpack_core/index.js',
+		es: './es6/index.js'
 	},
-	devtool: 'cheap-module-eval-source-map',
+	// devtool: 'cheap-module-eval-source-map',
+	devtool: 'none',
 	devServer: {
 		// 以dist为基础启动一个服务器，服务器运行在4200端口上，每次启动时自动打开浏览器
 		contentBase: 'dist',
@@ -31,6 +33,13 @@ module.exports = {
 			// 		}
 			// 	}
 			// },
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader'
+				}
+			},
 			{
 				test: /\.(jpg|png|gif)$/,
 				use: {
