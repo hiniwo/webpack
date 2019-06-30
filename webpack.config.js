@@ -24,7 +24,8 @@ const entry = {
 	core: './webpack_core/index.js',
 	es: './es6/index.js',
 	advance : './webpack_advance/index.js',
-	mian : './webpack_config/dev_server.js'
+	main : './webpack_config/dev_server.js',
+	type_script : './webpack_config/type_script.ts'
 };
 
 const newHtml = makeHtmlPlugins(entry);
@@ -34,6 +35,9 @@ module.exports = {
 	entry: entry,
 	// devtool: 'cheap-module-eval-source-map',
 	devtool: 'source-map',
+	resolve:{
+		extensions:['.js','.json','.tsx','.ts','.vue'],
+	},
 	devServer: {
 		// 以dist为基础启动一个服务器，服务器运行在4200端口上，每次启动时自动打开浏览器
 		contentBase: 'dist',
@@ -84,6 +88,13 @@ module.exports = {
 						loader: 'babel-loader'
 					}
 				]
+			},
+			{
+				test: /\.(ts|tsx)?$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'ts-loader'
+				}
 			},
 			{
 				test: /\.(jpg|png|gif)$/,
