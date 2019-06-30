@@ -1,6 +1,5 @@
 
 console.log(123);
-// import '@babel/polyfill';
 const arr = [
 	new Promise(() => {}),
 	new Promise(() => {}),
