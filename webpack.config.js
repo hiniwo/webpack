@@ -48,8 +48,8 @@ module.exports = {
 	devServer: {
 		// 以dist为基础启动一个服务器，服务器运行在4200端口上，每次启动时自动打开浏览器
 		contentBase: 'dist',
-		index: 'index.html',
-		openPage: 'index.html',
+		// index: 'index.html',
+		// openPage: 'index.html',
 		open: true,
 		port: 8080,
 		hot: true, // 启用模块热更新
