@@ -19,3 +19,5 @@ function getComponent () {
 		return element;
 	})
 }
+
+console.log('webpack_advance');

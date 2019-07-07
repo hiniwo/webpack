@@ -10,4 +10,4 @@ class Greeter {
 
 let greeter = new Greeter('why');
 console.log(greeter.greet());
-alert(123)
+alert(123);

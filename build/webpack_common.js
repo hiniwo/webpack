@@ -5,6 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const addAssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin');
+
 module.exports = {
 	entry: {
 		mian : './webpack_advance/index.js'
@@ -54,7 +56,10 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template : 'index.html'
 		}),
-		new CleanWebpackPlugin()
+		new CleanWebpackPlugin(),
+		new addAssetHtmlWebpackPlugin({
+			filepath: path.resolve(__dirname, '../dll/vendors.dll.js')
+		})
 	],
 	output : {
 		filename: '[name].js',

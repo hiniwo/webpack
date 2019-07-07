@@ -5,7 +5,8 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
 const optimizaCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
-const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+// const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 function makeHtmlPlugins(configs) {
 	const htmlPlugins = [];
@@ -41,6 +42,8 @@ module.exports = {
 	devServer: {
 		// 以dist为基础启动一个服务器，服务器运行在4200端口上，每次启动时自动打开浏览器
 		contentBase: 'dist',
+		index: 'index.html',
+		openPage: 'type_script.html',
 		open: true,
 		port: 8080,
 		hot: true, // 启用模块热更新
@@ -70,16 +73,6 @@ module.exports = {
 	},
 	module : {
 		rules : [
-			// {
-			// 	test : /\.(png|jpg|gif)$/,
-			// 	use :{
-			// 		loader : 'file-loader',
-			// 		options : {
-			// 			name : '[hame]_[hash].[ext]',
-			// 			outputPath : 'images/'
-			// 		}
-			// 	}
-			// },
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
@@ -147,11 +140,11 @@ module.exports = {
 		new webpack.ProvidePlugin({
 			$: 'jquery',
 		}),
-		//开启 PWA 浏览器缓存
-		new WorkboxWebpackPlugin.GenerateSW({
-			clientsClaim: true,
-			skipWaiting: true
-		})
+		// new BundleAnalyzerPlugin(),
+		// new WorkboxWebpackPlugin.GenerateSW({
+		// 	clientsClaim: true,
+		// 	skipWaiting: true
+		// })
 	].concat(newHtml),
 	output : {
 		filename: '[name].js',
