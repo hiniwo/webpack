@@ -26,7 +26,8 @@ const entry = {
 	es: './es6/index.js',
 	advance : './webpack_advance/index.js',
 	main : './webpack_config/dev_server.js',
-	type_script : './webpack_config/type_script.ts'
+	type_script : './webpack_config/type_script.ts',
+	loader:'./webpack_loader_and_plugin/index.js'
 };
 
 const newHtml = makeHtmlPlugins(entry);
@@ -38,6 +39,9 @@ module.exports = {
 	devtool: 'source-map',
 	resolve:{
 		extensions:['.js','.json','.tsx','.ts','.vue'],
+	},
+	resolveLoader: { //关联loader
+		modules: ['node_modules', './loaders']
 	},
 	devServer: {
 		// 以dist为基础启动一个服务器，服务器运行在4200端口上，每次启动时自动打开浏览器
@@ -79,6 +83,12 @@ module.exports = {
 				use: [
 					{
 						loader: 'babel-loader'
+					},
+					{
+						loader :'replace_loader',
+						options: {
+							word: 'very bad'
+						}
 					}
 				]
 			},
