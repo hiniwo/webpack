@@ -23,6 +23,7 @@ function makeHtmlPlugins(configs) {
 	return htmlPlugins;
 }
 const entry = {
+	index:'./loader/index.js',
 	core: './webpack_core/index.js',
 	es: './es6/index.js',
 	advance : './webpack_advance/index.js',
@@ -48,7 +49,7 @@ module.exports = {
 		// 以dist为基础启动一个服务器，服务器运行在4200端口上，每次启动时自动打开浏览器
 		contentBase: 'dist',
 		index: 'index.html',
-		openPage: 'type_script.html',
+		openPage: 'index.html',
 		open: true,
 		port: 8080,
 		hot: true, // 启用模块热更新
@@ -146,7 +147,7 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin(),
 		new miniCssExtractPlugin({
-			filename: '[name].css'
+			filename: 'css/'+'[name].css'
 		}),
 		new webpack.ProvidePlugin({
 			$: 'jquery',
@@ -159,7 +160,7 @@ module.exports = {
 		// })
 	].concat(newHtml),
 	output : {
-		filename: '[name].js',
+		filename: 'js/' + '[name].js',
 		path: path.resolve(__dirname, 'dist')
 	}
 };
