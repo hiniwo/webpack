@@ -7,6 +7,7 @@ const miniCssExtractPlugin = require('mini-css-extract-plugin');
 const optimizaCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 // const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const copyWebpackPlugin = require('./plugins/copy.js'); //已用自己编写的组件
 
 function makeHtmlPlugins(configs) {
 	const htmlPlugins = [];
@@ -150,6 +151,7 @@ module.exports = {
 		new webpack.ProvidePlugin({
 			$: 'jquery',
 		}),
+		new copyWebpackPlugin()
 		// new BundleAnalyzerPlugin(),
 		// new WorkboxWebpackPlugin.GenerateSW({
 		// 	clientsClaim: true,
